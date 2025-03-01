@@ -1,4 +1,3 @@
-module GoLearn // name of the project or the folder that contains the go executables
+module github.com/anandku06/GoLearns // conventional module name for any GO Project
 
-go 1.24.0 // the current version of GO lang using
-
+go 1.24.0
