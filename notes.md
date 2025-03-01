@@ -10,6 +10,8 @@
     2. library/packages -> contains programs that get imported from these libraries or packages, these are built by some one and can be used by other programmers for faster productivity
 - all files of GO has an extension of .go (e.g. main.go)
 ```go
+    // basic GO structure
+
     package main
 
     import "fmt"
@@ -18,6 +20,7 @@
         fmt.Println("Hello World!!");
     }
 ```
+- every GO file must have packaga declaration, by convention each executable GO file must have *main* package and function
 
 ## go.mod file
 - contains some necessary info regarding the project like the current version of GO and the project's folder name, etc.
