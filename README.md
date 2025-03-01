@@ -41,7 +41,7 @@ go version
 ### **2️⃣ Clone This Repository**
 
 ```bash
-git clone https://github.com/yourusername/go-learning-journey.git
+git clone https://github.com/anandku06/go-learning-journey.git
 cd go-learning-journey
 ```
 
