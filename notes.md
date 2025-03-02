@@ -21,6 +21,16 @@
     }
 ```
 - every GO file must have packaga declaration, by convention each executable GO file must have *main* package and function
+- GO supports UTF-8 character encoding.
+- Provides Cross Platform Single Binary executables -> GO can generate executable binaries
+```bash
+    go run <file_name> # runs the executable file ; more faster than build command
+    go build <file_name> # used to build the GO file that returns a executable ; here OS is not specified so the executable is for the current OS
+
+    GOOS=windows GOARCH=amd64 go build . # creates the executable for windows OS with amd54 architecture
+
+    ./main # then running the executable will return the same file
+```
 
 ## go.mod file
 - contains some necessary info regarding the project like the current version of GO and the project's folder name, etc.
