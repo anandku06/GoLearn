@@ -7,7 +7,7 @@
 ## Basics
 - a go program can be of two types :
     1. Executables -> contains code that can be run ; a program
-    2. library/packages -> contains programs that get imported from these libraries or packages, these are built by some one and can be used by other programmers for faster productivity
+    2. library/packages -> contains programs that get imported from these libraries or packages, these are built by some one and can be used by other programmers for faster productivity ; must be in *lowercase* and as short as possible
 - all files of GO has an extension of .go (e.g. main.go)
 ```go
     // basic GO structure
