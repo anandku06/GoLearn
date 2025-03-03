@@ -23,6 +23,7 @@
 - every GO file must have packaga declaration, by convention each executable GO file must have *main* package and function
 - GO supports UTF-8 character encoding.
 - Provides Cross Platform Single Binary executables -> GO can generate executable binaries
+- a statically typed language : all datatypes are checked during the program compilation
 - **GO's Encapsulation** -> when the functions or variables are accessed declared using capital letter, they can be accessed ouside of thier native package, but not when they are declared with lowercase
 ```bash
     go run <file_name> # runs the executable file ; more faster than build command
@@ -46,3 +47,23 @@ go get <package_name> # appends any external package that can be used in the mod
 go mod download # all the packages used in the project is fetched in the mod file
 
 ```
+
+## functions
+```go
+    // syntax for a function in GO
+    func functionName(parameter1 datatype, parameter2 datatype, ...) return type{
+        // body of the function
+    }
+
+    // starts with the keyword "func" and the function name
+    // parameters are given like "parameter datatype"
+    // after parenthesis the function's return type
+
+    // example
+    func add(x int, y int) int {
+        return a + b
+    }
+
+```
+- in GO, parameter datatypes are checked during compilation, so defined datatype must be given as args to avoid errors
+- can return multiple values at once
