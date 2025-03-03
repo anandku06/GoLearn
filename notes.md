@@ -23,6 +23,7 @@
 - every GO file must have packaga declaration, by convention each executable GO file must have *main* package and function
 - GO supports UTF-8 character encoding.
 - Provides Cross Platform Single Binary executables -> GO can generate executable binaries
+- **GO's Encapsulation** -> when the functions or variables are accessed declared using capital letter, they can be accessed ouside of thier native package, but not when they are declared with lowercase
 ```bash
     go run <file_name> # runs the executable file ; more faster than build command
     go build <file_name> # used to build the GO file that returns a executable ; here OS is not specified so the executable is for the current OS

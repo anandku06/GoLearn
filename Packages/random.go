@@ -9,5 +9,5 @@ import (
 
 func main(){
 	fmt.Println("My favourite number is -> ", rand.Intn(10)) // genrates a random number from 0 to 10
-	fmt.Println(math.Pi) // returns the PI value ; accessing a variable from the package math
+	fmt.Println(math.Pi) // returns the PI value ; accessing a variable from the package math outside the package, the first letter is capital
 }
