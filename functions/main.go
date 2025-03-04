@@ -17,7 +17,7 @@ func swap(x, y string) (string, string){
 
 // here a new type of return method
 // in place of giving (int, int), we used (x, y int) i.e. used the return variables and thier datatypes
-// what this does that now x and y are initialised before the start of the function body's execution
+// what this does that now x and y are initialised and assigned thier default value as 0 (bcz of int) before the start of the function body's execution
 // that's why x and y are not initialised as well
 func split(sum int) (x, y int) {
 	x = sum * 4 / 9

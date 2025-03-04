@@ -67,3 +67,22 @@ go mod download # all the packages used in the project is fetched in the mod fil
 ```
 - in GO, parameter datatypes are checked during compilation, so defined datatype must be given as args to avoid errors
 - can return multiple values at once
+
+## Variables
+- in GO, variables are also declared using the **var** keyword along with the variableName and the datatype.
+- in GO, a variable is not uninitialised ever, it gets the default value whenever its declared
+- many ways to declare variable in GO, outside and inside the function
+```go
+    // Syntax -> var varName datatype
+
+    // these types are allowed only outside the main function and are initialised with default values
+    var isLoggedIn bool // default value is false
+    var x, y, z int // if all the vars are of same type , default value is 0
+
+    func main(){
+        var i int // allowed but initialised with its default value
+        i := 10 // only allowed inside the function
+        var i = 10 // this is also allowed
+        var i string = "Hello" // this is the extended version where you fixed the datatype, only string datatype is entertained
+    }
+```
