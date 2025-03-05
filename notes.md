@@ -109,3 +109,8 @@ go mod download # all the packages used in the project is fetched in the mod fil
 - **type conversions** is basically done in statically-typed language like GO, no implicit conversion only explicit conversion
 - **type inference** : when compiler infers the type of the data implicitly and this type can't be changed in later phases of the program
 - **constants** : means can't change its value once assigned, evaluated during compile time, declared using the *const* keyword, can store only **basic datatypes**
+
+## Loops
+- In GO, we have only for loop, changing the semantics of the for loop syntax, we implement all the other loops
+- loops are used to execute some set of instructions again and again until a specified count or condition is met.
+- termination condition is important, without it loop is infinte ( can use **break** statement, to stop the execution )
