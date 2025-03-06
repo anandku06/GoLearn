@@ -118,5 +118,11 @@ go mod download # all the packages used in the project is fetched in the mod fil
 - termination condition is important, without it loop is infinte ( can use **break** statement, to stop the execution )
 
 ## Conditionals
+
 - Conditionals are like if true, then do this else do this
 - use if-else statements for that
+
+## Switch-Case statements
+- switch-case statements in GO, just like any other languages
+- checks the value of the variable against the cases provided and if the case matches, the code inside that case is executed and the execution exits the switch block
+- no fall-through condition, after case matching, it automatically exits the switch block
