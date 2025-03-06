@@ -101,6 +101,7 @@ go mod download # all the packages used in the project is fetched in the mod fil
 ## Datatypes
 
 - in GO, we have:
+
   1. Basic -> numbers{int, uint, byte, rune, float, complex}, string, bool
   2. Aggregated -> array, struct
   3. Reference (they don't have the data, they refer the data that are in other places in the program) -> pointers, slices, function, channel, maps
@@ -108,9 +109,14 @@ go mod download # all the packages used in the project is fetched in the mod fil
 
 - **type conversions** is basically done in statically-typed language like GO, no implicit conversion only explicit conversion
 - **type inference** : when compiler infers the type of the data implicitly and this type can't be changed in later phases of the program
-- **constants** : means can't change its value once assigned, evaluated during compile time, declared using the *const* keyword, can store only **basic datatypes**
+- **constants** : means can't change its value once assigned, evaluated during compile time, declared using the _const_ keyword, can store only **basic datatypes**
 
 ## Loops
+
 - In GO, we have only for loop, changing the semantics of the for loop syntax, we implement all the other loops
 - loops are used to execute some set of instructions again and again until a specified count or condition is met.
 - termination condition is important, without it loop is infinte ( can use **break** statement, to stop the execution )
+
+## Conditionals
+- Conditionals are like if true, then do this else do this
+- use if-else statements for that
