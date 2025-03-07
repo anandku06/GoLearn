@@ -133,3 +133,8 @@ go mod download # all the packages used in the project is fetched in the mod fil
 - execution follows LIFO
 - if any hinderence or any exception occurs in the main function execution, then the defer statements are executed one-by-one
 - Usecases can be file handling, database handling, etc. that can hinder the main flow of the program can be exexuted after the main program is returned
+
+## Reference Types (depend on other datatypes)
+1. **Pointers** - which points to the address to a variable, contains the address of a variable ; we can access the value on the address by dereferencing it using the asterisk sign(*)
+    - Address here is memory address, virtual address(bcz due to GO runtime, we're not in the actual OS) that contains the value of that variable, when declared automatically assigned an address.
+    - accessed using the ampersend sign(&)
