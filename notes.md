@@ -126,3 +126,10 @@ go mod download # all the packages used in the project is fetched in the mod fil
 - switch-case statements in GO, just like any other languages
 - checks the value of the variable against the cases provided and if the case matches, the code inside that case is executed and the execution exits the switch block
 - no fall-through condition, after case matching, it automatically exits the switch block
+
+## defer
+- a keyword in GO used to execute a piece of code asynchronously, i.e. parallely to the main execution
+- the code with this keyword gets pushed in the exection stack and executed after the main function is executed or returned
+- execution follows LIFO
+- if any hinderence or any exception occurs in the main function execution, then the defer statements are executed one-by-one
+- Usecases can be file handling, database handling, etc. that can hinder the main flow of the program can be exexuted after the main program is returned
