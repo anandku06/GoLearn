@@ -123,11 +123,13 @@ go mod download # all the packages used in the project is fetched in the mod fil
 - use if-else statements for that
 
 ## Switch-Case statements
+
 - switch-case statements in GO, just like any other languages
 - checks the value of the variable against the cases provided and if the case matches, the code inside that case is executed and the execution exits the switch block
 - no fall-through condition, after case matching, it automatically exits the switch block
 
 ## defer
+
 - a keyword in GO used to execute a piece of code asynchronously, i.e. parallely to the main execution
 - the code with this keyword gets pushed in the exection stack and executed after the main function is executed or returned
 - execution follows LIFO
@@ -135,6 +137,42 @@ go mod download # all the packages used in the project is fetched in the mod fil
 - Usecases can be file handling, database handling, etc. that can hinder the main flow of the program can be exexuted after the main program is returned
 
 ## Reference Types (depend on other datatypes)
-1. **Pointers** - which points to the address to a variable, contains the address of a variable ; we can access the value on the address by dereferencing it using the asterisk sign(*)
-    - Address here is memory address, virtual address(bcz due to GO runtime, we're not in the actual OS) that contains the value of that variable, when declared automatically assigned an address.
-    - accessed using the ampersend sign(&)
+
+1. **Pointers** - which points to the address to a variable, contains the address of a variable ; we can access the value on the address by dereferencing it using the asterisk sign(\*)
+   - Address here is memory address, virtual address(bcz due to GO runtime, we're not in the actual OS) that contains the value of that variable, when declared automatically assigned an address.
+   - accessed using the ampersend sign(&)
+
+## structs
+
+- a type of aggregate datatypes; a collection of different datatypes
+- can be accessed using the struct name and the curly braces containing the value for that struct
+- fields or data of the struct can be accessed using the dot notation
+
+```go
+// syntax
+// type keyword along with the struct name and struct keyword then under the curly braces, we define the data to be provided in the struct
+type structName struct{
+    // fields / values for this struct
+}
+
+// example of a struct that contains the dimensions of a parallelogram
+type Sides struct{
+    l int // data with its datatype
+    b int
+}
+
+// to access we call the struct by its name and using the curly braces
+// under the braces we provide the values of the same datatype and in the same order they were defined 
+
+Sides{24, 45}
+```
+- fields name under structs must start with capital letters for better exposure of variables outside thier packages
+- **structs with pointers** : pointers can also be used with structs, same operations can be performed using pointers as well
+
+- *struct tags* -> used to give some additional cmds/mapping for values to the struct's fields
+```go
+    type GenerateCheckoutLink struct{
+        PlanID string `json:"planId"` // this is a struct tag
+        // here this tag is responsible for parsing the incoming json data's specific key "planId" to the struct field PlanID
+    }
+```
