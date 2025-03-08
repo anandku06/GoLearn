@@ -188,3 +188,19 @@ Sides{24, 45}
     // size of the array is part of its type
     // follows 0-based indexing
 ```
+
+## slices in GO
+- a very special data structure in GO, flexible and useful, also called reference types bcz it has always some backing array from which its values depends
+- slicing from the array to create a new array
+- main concept is slice doesn't create a new array, it just points to a element that eventually creates a subarray from the original array
+- has 3 parts
+    1. length -> length of the slice
+    2. capacity -> from starting element of the slice to the last element of the backing array
+    3. pointer -> to the element of the array through which the slice is made from i.e. the first element of the slice 
+
+```go
+    nums := [5]int {1, 2, 3, 4, 5}
+
+    var half []int = nums[0:3] // here the nums array is sliced from 0th to 2nd(3 not included) position -> 1 2,3 is returned
+    // slice is done using the [] braces and under it we give the starting index and the ending index which is exclusive
+```
