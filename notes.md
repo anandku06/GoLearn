@@ -176,3 +176,15 @@ Sides{24, 45}
         // here this tag is responsible for parsing the incoming json data's specific key "planId" to the struct field PlanID
     }
 ```
+
+## arrays in Go
+- aggregate datatype used to store multiple datas of same type
+- size also is the type of the array
+- due to this the size of an array is fixed because GO is statically-typed, that's the reason it isn't used much
+```go
+    // syntax
+    // var keyword arrayName [size]datatype
+    var a [2]string // this means array "a" which is of string and size is of 2 data
+    // size of the array is part of its type
+    // follows 0-based indexing
+```
