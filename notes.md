@@ -147,6 +147,7 @@ go mod download # all the packages used in the project is fetched in the mod fil
 - a type of aggregate datatypes; a collection of different datatypes
 - can be accessed using the struct name and the curly braces containing the value for that struct
 - fields or data of the struct can be accessed using the dot notation
+- default value is default values of its field
 
 ```go
 // syntax
@@ -180,6 +181,7 @@ Sides{24, 45}
 ## arrays in Go
 - aggregate datatype used to store multiple datas of same type
 - size also is the type of the array
+- default value is all the default values of the elements
 - due to this the size of an array is fixed because GO is statically-typed, that's the reason it isn't used much
 ```go
     // syntax
@@ -191,6 +193,7 @@ Sides{24, 45}
 
 ## slices in GO
 - a very special data structure in GO, flexible and useful, also called reference types bcz it has always some backing array from which its values depends
+- default value is *nil*
 - slicing from the array to create a new array
 - main concept is slice doesn't create a new array, it just points to a element that eventually creates a subarray from the original array
 - has 3 parts
@@ -202,6 +205,9 @@ Sides{24, 45}
 - while its a dynamic array, we don't specify the size, we just keep it empty
 - slices can also be made using other slices as well
 - we can extend the length of the slice upto the capacity of it
+- slice having no elements or not initialised, has 0 length and 0 capacity and is a empty slice (or nil)
+- reference types can also be declared using the built-in function **make()**
+- **multidimensional slices** : each element of slice is a slice itself
 
 ```go
     nums := [5]int {1, 2, 3, 4, 5}

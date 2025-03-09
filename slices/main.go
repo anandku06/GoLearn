@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 func main() {
@@ -68,11 +69,39 @@ func main() {
 	s = s[2:] // drop its first two elements
 	printSlices(s)
 
-	var d []int // here slice hasn't got any value so it will get it's default value
+	var d []int // here slice hasn't got any value so it will get it's default value which is an empty slice or nil
 	fmt.Println(d, len(d), cap(d))
 
 	if d == nil {
 		fmt.Println("nil")
+	}
+
+	// using the make() function to declare slices
+	// make() -> The make built-in function allocates and initializes an object of type slice, map, or chan (only)
+	// first arg is the type, what to initialise and second is the size, and third in the case of slices we can give the capacity
+
+	c := make([]int, 5) // here we gave []int of capacity 5 so 5 zeros(due to int) will print in the slice
+	printSlices(c)
+
+	e := make([]int, 0, 5) // here we gave the length to be zero and capacity 5 so , an empty slice will print
+	printSlices(e)
+
+	f := c[:2] // sliced from the 0th index to 2nd index we get 2 elements so l=2 and c=5
+	printSlices(f)
+
+	g := c[2:5] // sliced fromt he 2nd index to 5th index, here len=3 but cap=3 bcz we sliced from the 2nd, not from the 0th
+	printSlices(g)
+
+	// 2-D slices
+	board := [][]string{
+		[]string{"_", "_", "_"},
+		[]string{"_", "_", "_"},
+		[]string{"_", "_", "_"},
+	} // here each element is itself a slice
+
+	for i := 0; i < len(board); i++ {
+		// fmt.Printf("%s\n", board[i])
+		fmt.Printf("%s\n", strings.Join(board[i], " ")) // used the string Join method to join the string in the slice, seperated by spaces
 	}
 }
 
