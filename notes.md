@@ -198,6 +198,11 @@ Sides{24, 45}
     2. capacity -> from starting element of the slice to the last element of the backing array
     3. pointer -> to the element of the array through which the slice is made from i.e. the first element of the slice 
 
+- slices can also be created without using any backing array
+- while its a dynamic array, we don't specify the size, we just keep it empty
+- slices can also be made using other slices as well
+- we can extend the length of the slice upto the capacity of it
+
 ```go
     nums := [5]int {1, 2, 3, 4, 5}
 
