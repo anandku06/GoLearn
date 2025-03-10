@@ -209,6 +209,12 @@ Sides{24, 45}
 - reference types can also be declared using the built-in function **make()**
 - **multidimensional slices** : each element of slice is a slice itself
 
+- **append()** : append built-in function *appends elements to the end of a slice*. 
+    - If it has sufficient capacity, the destination is resliced to accommodate the new elements. 
+    - If it does not, a new underlying array will be allocated. Append returns the updated slice. 
+    - It is therefore necessary to store the result of append, often in the variable holding the slice itself,
+    - Its a *variadic function* i.e. can take any number of arguments
+
 ```go
     nums := [5]int {1, 2, 3, 4, 5}
 
