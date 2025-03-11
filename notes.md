@@ -250,3 +250,9 @@ Sides{24, 45}
     }
 ```
 - intialisation of maps using var is avoided as it assigns *nil* value to the map and the key-value can't be assigned again to it
+
+### Maps vs Structs
+- cannot range loop on structs but possible in maps
+- structs fields has thier own memory location but not in the case of maps 
+- order of the printing of map elements are randomised when looped over
+- structs for storing and maps for lookups and faster searching
