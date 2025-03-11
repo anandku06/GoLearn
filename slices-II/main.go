@@ -16,6 +16,14 @@ func main(){
 
 	s = append(s, 2, 3, 4) // here multiple elements are appended together
 	printSlices(s)
+
+	var nums []int
+	for i := 0; i < 20; i++ {
+		nums = append(nums, i)
+		printSlices(nums)
+	}
+	// whenever the capacity is exhausted, in the next append the caoacity is doubled
+	// these extra calculations are prevented using the make function, for assigning any slice
 }
 
 func printSlices(s []int) {

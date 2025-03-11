@@ -163,14 +163,16 @@ type Sides struct{
 }
 
 // to access we call the struct by its name and using the curly braces
-// under the braces we provide the values of the same datatype and in the same order they were defined 
+// under the braces we provide the values of the same datatype and in the same order they were defined
 
 Sides{24, 45}
 ```
+
 - fields name under structs must start with capital letters for better exposure of variables outside thier packages
 - **structs with pointers** : pointers can also be used with structs, same operations can be performed using pointers as well
 
-- *struct tags* -> used to give some additional cmds/mapping for values to the struct's fields
+- _struct tags_ -> used to give some additional cmds/mapping for values to the struct's fields
+
 ```go
     type GenerateCheckoutLink struct{
         PlanID string `json:"planId"` // this is a struct tag
@@ -179,10 +181,12 @@ Sides{24, 45}
 ```
 
 ## arrays in Go
+
 - aggregate datatype used to store multiple datas of same type
 - size also is the type of the array
 - default value is all the default values of the elements
 - due to this the size of an array is fixed because GO is statically-typed, that's the reason it isn't used much
+
 ```go
     // syntax
     // var keyword arrayName [size]datatype
@@ -192,14 +196,16 @@ Sides{24, 45}
 ```
 
 ## slices in GO
+
 - a very special data structure in GO, flexible and useful, also called reference types bcz it has always some backing array from which its values depends
-- default value is *nil*
+- default value is _nil_
 - slicing from the array to create a new array
 - main concept is slice doesn't create a new array, it just points to a element that eventually creates a subarray from the original array
 - has 3 parts
-    1. length -> length of the slice
-    2. capacity -> from starting element of the slice to the last element of the backing array
-    3. pointer -> to the element of the array through which the slice is made from i.e. the first element of the slice 
+
+  1. length -> length of the slice
+  2. capacity -> from starting element of the slice to the last element of the backing array
+  3. pointer -> to the element of the array through which the slice is made from i.e. the first element of the slice
 
 - slices can also be created without using any backing array
 - while its a dynamic array, we don't specify the size, we just keep it empty
@@ -209,11 +215,13 @@ Sides{24, 45}
 - reference types can also be declared using the built-in function **make()**
 - **multidimensional slices** : each element of slice is a slice itself
 
-- **append()** : append built-in function *appends elements to the end of a slice*. 
-    - If it has sufficient capacity, the destination is resliced to accommodate the new elements. 
-    - If it does not, a new underlying array will be allocated. Append returns the updated slice. 
-    - It is therefore necessary to store the result of append, often in the variable holding the slice itself,
-    - Its a *variadic function* i.e. can take any number of arguments
+- **append()** : append built-in function _appends elements to the end of a slice_.
+  - If it has sufficient capacity, the destination is resliced to accommodate the new elements.
+  - If it does not, a new underlying array will be allocated. Append returns the updated slice.
+  - It is therefore necessary to store the result of append, often in the variable holding the slice itself,
+  - if the capacity isn't enough then, for the future appends it just doubles its capacity
+  - Its a _variadic function_ i.e. can take any number of arguments
+  - It can be prevented by using the **make()** function
 
 ```go
     nums := [5]int {1, 2, 3, 4, 5}
