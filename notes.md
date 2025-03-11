@@ -229,3 +229,24 @@ Sides{24, 45}
     var half []int = nums[0:3] // here the nums array is sliced from 0th to 2nd(3 not included) position -> 1 2,3 is returned
     // slice is done using the [] braces and under it we give the starting index and the ending index which is exclusive
 ```
+## Maps
+- a reference type of default value of **nil**
+- GO offers the implementation of hashmaps, dictionaries, etc. in key-value pairs ; key must be comparable ; keys are mostly of strings
+- must used to enhance searching
+```go
+    var m map[string]Vertex
+    // package level so using var
+    // m is the map name
+    // map keyword for map initialisation
+    // datatype of keys inside square braces
+    // datatype of value to be stored
+    
+    m["key"] = value // assigning key-value pair
+    
+    // using map literals for initialising
+    // assigning the key : value pairs in this form
+    var m = map[string]Vertex{
+        keys : values ...
+    }
+```
+- intialisation of maps using var is avoided as it assigns *nil* value to the map and the key-value can't be assigned again to it
