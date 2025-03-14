@@ -279,3 +279,19 @@ Sides{24, 45}
 
     hypot(3, 4) // this is how the function will be called
 ```
+
+## Closures in GO
+- same working as JS
+- in case of nested functions, the variable state of outer function is preserved by the inner function
+- basically used in place of static keyword in Non-OOPS language
+
+```go
+    // closures in GO
+    func adder() func(int) int {
+        sum := 0
+        return func(x int) int {
+            sum += x
+            return sum
+        }
+    }
+```
