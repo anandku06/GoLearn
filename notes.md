@@ -256,3 +256,26 @@ Sides{24, 45}
 - structs fields has thier own memory location but not in the case of maps 
 - order of the printing of map elements are randomised when looped over
 - structs for storing and maps for lookups and faster searching
+
+## Anonymous Functions
+
+- functions without name, or functions declared without giving them a function name ; not follows the particular function declaration
+- since functions are considered as first-class citizens, we can assign functions to any variable
+- can also be used as parameters in functions
+
+```go
+    // Traditional function declaration
+    func add(x, y int) int{
+        return x + y
+    }
+
+    // anonymous function declaration
+    hypot := func(x, y float64) float64{
+        return math.Sqrt(x * x + y * y)
+    }
+
+    // here we used the func keyword to declare the function but not given the function name
+    // so the variable containing the function is the function name
+
+    hypot(3, 4) // this is how the function will be called
+```
