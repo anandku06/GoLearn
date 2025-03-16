@@ -229,10 +229,13 @@ Sides{24, 45}
     var half []int = nums[0:3] // here the nums array is sliced from 0th to 2nd(3 not included) position -> 1 2,3 is returned
     // slice is done using the [] braces and under it we give the starting index and the ending index which is exclusive
 ```
+
 ## Maps
+
 - a reference type of default value of **nil**
 - GO offers the implementation of hashmaps, dictionaries, etc. in key-value pairs ; key must be comparable ; keys are mostly of strings
 - must used to enhance searching
+
 ```go
     var m map[string]Vertex
     // package level so using var
@@ -240,20 +243,22 @@ Sides{24, 45}
     // map keyword for map initialisation
     // datatype of keys inside square braces
     // datatype of value to be stored
-    
+
     m["key"] = value // assigning key-value pair
-    
+
     // using map literals for initialising
     // assigning the key : value pairs in this form
     var m = map[string]Vertex{
         keys : values ...
     }
 ```
-- intialisation of maps using var is avoided as it assigns *nil* value to the map and the key-value can't be assigned again to it
+
+- intialisation of maps using var is avoided as it assigns _nil_ value to the map and the key-value can't be assigned again to it
 
 ### Maps vs Structs
+
 - cannot range loop on structs but possible in maps
-- structs fields has thier own memory location but not in the case of maps 
+- structs fields has thier own memory location but not in the case of maps
 - order of the printing of map elements are randomised when looped over
 - structs for storing and maps for lookups and faster searching
 
@@ -281,6 +286,7 @@ Sides{24, 45}
 ```
 
 ## Closures in GO
+
 - same working as JS
 - in case of nested functions, the variable state of outer function is preserved by the inner function
 - basically used in place of static keyword in Non-OOPS language
@@ -294,4 +300,32 @@ Sides{24, 45}
             return sum
         }
     }
+```
+
+## type Keyword
+- The type keyword in Go is used to define custom types, type aliases, and struct types. It enhances code readability and maintainability by giving meaningful names to types.
+```go
+type Age int // defining custom type
+
+type Number = int // defining type aliase
+
+```
+
+## Methods in GO
+
+- A method in Go is a function with a special parameter called a receiver. The receiver ties the function to a specific type, allowing you to call the method on instances of that type using dot notation
+- feature in GO that allows us to assign types to functions
+- like OOP concept, methods of a class that can access all the properties of its parent class
+- used to deifne a certain behaviour or properties for a particular type
+- can be used on any datatype
+```go
+type ReceiverType struct{
+    // params for this type struct
+}
+
+func (receiver ReceiverType) MethodName(params) returnType {
+    // Method body
+}
+
+// receiver is the name assigned to the ReceiverType
 ```
