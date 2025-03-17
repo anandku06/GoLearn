@@ -18,6 +18,7 @@ type MyFloat float64
 func (v Vertex) Abs() float64{
 	return math.Sqrt(v.x * v.x + v.y * v.y) // here accessing the field of the struct type and performing the operation
 }
+// this is also called Value Receiving : method gets the copy of the original value here
 
 func Abs(v Vertex) float64{ // this is a function not a method
 	return math.Sqrt(v.x * v.x + v.y * v.y) // here accessing the field of the struct type and performing the operation
@@ -31,6 +32,12 @@ func (f MyFloat) Abs() float64 {
 	return float64(f)
 }
 
+func (v *Vertex) Scale(f float64){
+	v.x = v.x * f
+	v.y = v.y * f
+}
+// this is Pointer Receiving : method gets the pointer to the original value i.e. if change happens then it'll affect the original value as well
+
 func main() {
 	v := Vertex{x: 3, y: 4} // declaring a var of struct
 	fmt.Println(v.Abs()) // we are able to use this bcz we given the same datatype to this function and this datatype acts as the receiving type of that function
@@ -40,4 +47,7 @@ func main() {
 
 	f := MyFloat(-math.Sqrt(4))
 	fmt.Println(f.Abs())
+	v.Scale(10) // now the value is changed here
+	fmt.Println(v.x, v.y) // here the value is changed
+	fmt.Println(v.Abs()) // after changing the value
 }

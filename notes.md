@@ -329,3 +329,13 @@ func (receiver ReceiverType) MethodName(params) returnType {
 
 // receiver is the name assigned to the ReceiverType
 ```
+- two types of Receiving type in GO:
+    1. Value receiving: 
+        - the method uses the copies of the receiver type
+        - changes made to the receiver inside the method don't affect the original value
+    2. Pointer receiving:
+        - method gets the a pointer to the original value
+        - changed made to the receiver inside the method affect the original value
+- when changes has to be done on a vast number of types, use pointer receiving
+- when mutating the values use pointer receiving type
+- convention is to make either all the types pointer receiving or value receiving, not both 
