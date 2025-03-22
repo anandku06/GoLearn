@@ -33,4 +33,6 @@ func main() {
 	p := &Vertex{4, 3} // this time using the pointer of the receiving type ; but not needed as GO implicitly does this on its own
 	p.Scale(3)
 	ScaleFunc(p, 4)
+
+	fmt.Println(p)
 }

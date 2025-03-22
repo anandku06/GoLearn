@@ -339,3 +339,18 @@ func (receiver ReceiverType) MethodName(params) returnType {
 - when changes has to be done on a vast number of types, use pointer receiving
 - when mutating the values use pointer receiving type
 - convention is to make either all the types pointer receiving or value receiving, not both 
+
+## Interfaces in GO
+- a type that defines a set of method signatures without specifying how these methods are implemented
+- defined using `interface` keyword and contains methods signatures inside it
+```go
+type Writer interface{
+    Write(data string) error
+}
+// Writer interface having a method that takes s string and returns an error
+```
+- defines a behaviour a type should have to implement the interface
+- methods in GO implicitly satisfies the conditions of interfaces, if not they are not implemented
+- default value of an interface is **nil**
+
+- **empty interface** : a interface with no methods, since it has no methods signatures, so it satisfies all the types in GO
