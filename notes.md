@@ -354,3 +354,31 @@ type Writer interface{
 - default value of an interface is **nil**
 
 - **empty interface** : a interface with no methods, since it has no methods signatures, so it satisfies all the types in GO
+
+- **Type Assertion** : 
+    - a mechanism to extract or verify the underlying concrete value of an interface variable.
+    - especially for empty interface(interface{}) that can hold any type of data.
+    - it lets you check or convert that value to a specific type.
+    - Syntax => `value := interface.(datatype)` this is Single-value form
+        - returns the value if satisfies the datatype, and stores in the value variable
+    - Syntax => `value, ok := interface(datatype)` this is Double-value form, (mostly used)
+        - returns two values, if datatype satisfies then, value and true boolean value, else false and that datatypes default value
+    - to avoid this writing repeatedly we use **type-switch**
+```go
+var i interface{} = "hello"
+
+s := i.(string) // returns value, and true as satisfies
+
+f, ok := i.(float64) // returns false and zero as flaot64 can't be assigned to string
+
+f = i.(float64) // creates panic
+
+// Type-Switch : using Switch-case logic to assert the type of the interface
+switch value := interface.(datatype){
+    case datatype:
+        // do somthing
+    
+    default:
+        // do something
+}
+```
